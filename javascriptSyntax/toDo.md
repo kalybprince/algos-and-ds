@@ -11,8 +11,4 @@
 - functions
 - classes
 
-### [The Modern JavaScript Tutorial](https://javascript.info/)
-
-1. The language (focus on anything my own study might have missed)
-2. Browser: Document, Events, Interfaces
-3. Additional articles
+### Begin implementing algos/d.s. per algosList.md
