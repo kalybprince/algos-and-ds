@@ -13,6 +13,6 @@ Learn and implement the following:
 - Built-in methods
 - Advanced concepts (modules, promises, etc.)
 
-## Step 2 - Implement any and all objects/D.S.
+## Step 2 - Implement any and all objects/D.S. in javascript
 
-See algos-and-ds/AlgorithmsAndDataStructures.md for complete list
+See algos-and-ds/algosList.md for complete list
