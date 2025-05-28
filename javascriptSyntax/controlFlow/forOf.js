@@ -1,5 +1,8 @@
 /* for...of loop (ES6+):
-Iterates over the values of iterable objects (like Array, String, Map, Set, NodeList, etc.). This is the preferred way to iterate over array elements. */
+
+Iterates over the values of iterable objects (like Array,
+String, Map, Set, NodeList, etc.). This is the preferred
+way to iterate over array elements. */
 
 const colors = ["red", "green", "blue"];
 for (let color of colors) {

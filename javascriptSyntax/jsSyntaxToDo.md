@@ -7,7 +7,7 @@
 - ~~control flow structures~~
 - built-in data types
 - built-in methods
-- objects
+- ~~objects~~
 - ~~functions~~
 - classes
 
