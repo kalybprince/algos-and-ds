@@ -9,6 +9,6 @@
 - built-in methods
 - ~~objects~~
 - ~~functions~~
-- classes
+- ~~classes~~
 
 ### 2. Begin implementing algos/d.s. per algosList.md
