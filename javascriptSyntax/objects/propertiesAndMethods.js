@@ -55,7 +55,7 @@ const car = {
       `Vehicle Status:
       Running: ${this.carIsRunning}
       Driving: ${this.carIsDriving}
-    `
+      `
     );
   },
 
