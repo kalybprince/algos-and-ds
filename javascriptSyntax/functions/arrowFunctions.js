@@ -1,6 +1,7 @@
 /* Arrow Functions (ES6+)
 
-Arrow functions provide a more concise syntax for writing function expressions, especially useful for short, single-line functions. They also have different behavior regarding the this keyword (which is an advanced topic). 
+Arrow functions provide a more concise syntax for writing
+function expressions, especially useful for short, single-line functions. They also have different behavior regarding the this keyword (which is an advanced topic). 
 
 NOTE:  Arrow function are NOT HOISTED*/
 

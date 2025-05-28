@@ -1,6 +1,10 @@
 /* Higher-Order Functions and Callbacks
 
-A function that takes another function as an argument or returns a function is called a higher-order function. Functions passed as arguments are called callback functions. This is fundamental to asynchronous programming and many modern JavaScript patterns. */
+A function that takes another function as an argument or
+returns a function is called a higher-order function.
+Functions passed as arguments are called callback functions.
+This is fundamental to asynchronous programming and many
+modern JavaScript patterns. */
 
 // Example of a higher-order function (forEach) using a callback
 const colors = ["red", "green", "blue"];
