@@ -129,3 +129,34 @@ console.log(
 );
 // Output: [4, 3, 2, 1]
 
+// -- fill() - Fills array elements with a static value
+
+let fillArr = [1, 2, 3, 4, 5];
+console.log(
+  `fill()
+  Before: ${fillArr}`
+);
+// 0s from index 1 up to (but not including) index 4
+fillArr.fill(0, 1, 4);
+console.log(
+  `fill():
+  After: ${fillArr}
+  `
+);
+// Output: 1,0,0,0,5
+
+// -- copyWithin() - Copies part of an array to another
+//  location in the same array
+let copyWithinArr = [1, 2, 3, 4, 5];
+console.log(
+  `copyWithin():
+  Before: ${copyWithinArr}`
+);
+// Copy from index 3 (value 4) to index 0
+copyWithinArr.copyWithin(0, 3);
+console.log(
+  `copyWithin():
+  After (target 0, start 3): ${copyWithinArr}
+  `
+);
+// Output: [4, 5, 3, 4, 5]
