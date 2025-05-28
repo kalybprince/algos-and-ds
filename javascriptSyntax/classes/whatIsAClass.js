@@ -1,8 +1,14 @@
 /* What is a Class? (Syntactic Sugar for Prototypes)
 
-A class is a blueprint for creating objects (instances). It encapsulates data (properties) and functions that operate on that data (methods). 
+A class is a blueprint for creating objects (instances).
+It encapsulates data (properties) and functions that 
+operate on that data (methods). 
 
-Core Idea: Instead of defining a constructor function and then separately adding methods to its prototype property, classes bundle all this definition into a single, more readable block using the class keyword. */
+
+Core Idea: Instead of defining a constructor function and 
+then separately adding methods to its prototype property,
+classes bundle all this definition into a single, more
+readable block using the class keyword. */
 
 //
 // Example (Pre-ES6 vs. ES6 Class):
