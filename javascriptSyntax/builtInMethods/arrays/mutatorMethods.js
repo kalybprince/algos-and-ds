@@ -1,6 +1,4 @@
-// --- 1. Mutator Methods (Modify the Original Array) ---
-
-// NOTE:  Mutator Methods are not idiomatic
+// --- Mutator Methods (Modify the Original Array) ---
 
 // -- push() - Adds elements to the end
 
