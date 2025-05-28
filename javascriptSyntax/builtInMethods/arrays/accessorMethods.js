@@ -1,5 +1,12 @@
 // --- Accessor Methods (Do Not Modify the Original Array)
 
+// Primary array for demonstrations
+let numbers = [10, 20, 30, 40, 50];
+let fruits = ["apple", "banana", "cherry", "date", "banana"];
+let mixed = [1, "two", true, null, undefined, { id: 1 }, [7, 8]];
+let nestedArray = [1, [2, 3], [4, [5, 6]]];
+let sparseArray = [1, , , 4];
+
 // -- concat() - Merge two/more arrays, returns new array
 let arr1 = [1, 2];
 let arr2 = [3, 4];
@@ -33,7 +40,7 @@ console.log("slice(): slicedCopy ():", slicedCopy);
 // Output: [10, 20, 30, 40, 50]
 
 // -- indexOf() - returns the first index of an element, or -1
-let fruits = ["apple", "banana", "cherry", "date", "banana"];
+
 console.log("indexOf(): 'banana' in fruits:", fruits.indexOf("banana"));
 // Output: indexOf(): 'banana' in fruits: 1
 console.log(
@@ -55,8 +62,6 @@ console.log(
 // Output: lastIndexOf(): 'banana' from index 3 (backwards) in fruits 1
 
 // -- includes() - Checks if an array contains an element
-
-let numbers = [10, 20, 30, 40, 50];
 
 console.log("includes(): numbers includes 30?", numbers.includes(30)); // Output: true
 console.log("includes(): numbers includes 99?", numbers.includes(99)); // Output: false

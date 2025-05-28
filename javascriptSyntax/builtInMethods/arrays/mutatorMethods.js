@@ -1,5 +1,12 @@
 // --- Mutator Methods (Modify the Original Array) ---
 
+// Primary array for demonstrations
+let numbers = [10, 20, 30, 40, 50];
+let fruits = ["apple", "banana", "cherry", "date", "banana"];
+let mixed = [1, "two", true, null, undefined, { id: 1 }, [7, 8]];
+let nestedArray = [1, [2, 3], [4, [5, 6]]];
+let sparseArray = [1, , , 4];
+
 // -- push() - Adds elements to the end
 
 let pushNumbers = [1, 2];
