@@ -5,10 +5,12 @@
 ### 1. Syntax
 
 - ~~control flow structures~~
-- ~~built-in data types~~
 - built-in methods
-- ~~objects~~
 - ~~functions~~
+- ~~objects~~
 - ~~classes~~
+- promises
+- generators
+- modules
 
 ### 2. Begin implementing algos/d.s. per algosList.md
