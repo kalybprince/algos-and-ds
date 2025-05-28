@@ -49,7 +49,7 @@ const car = {
     );
   },
 
-  // Get engine status
+  // Get engine status (method shorthand [ES6+])
   engineStatus() {
     console.log(
       `Vehicle Status:
@@ -59,7 +59,6 @@ const car = {
     );
   },
 
-  // Method shorthand (ES6+)
   honkHorn() {
     console.log("Honking horn: Honk! Honk!");
   },
