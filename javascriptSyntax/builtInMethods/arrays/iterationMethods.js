@@ -32,7 +32,7 @@ console.log("map(): Doubled numbers:", doubedNumbers);
 
 // -- filter() - Creates new array with elements that pass a test
 
-let longFruits = fruits.filter(fruit => fruit.length > 5);
+let longFruits = fruits.filter((fruit) => fruit.length > 5);
 console.log("filter(): Fruits with length > 5:", longFruits);
 // Output: filter(): Fruits with length > 5: [ 'banana', 'cherry', 'banana' ]
 
