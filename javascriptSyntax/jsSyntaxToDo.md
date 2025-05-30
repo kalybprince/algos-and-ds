@@ -5,7 +5,7 @@
 ### 1. Syntax
 
 - ~~control flow structures~~
-- built-in methods
+- ~~built-in methods~~
 - ~~functions~~
 - ~~objects~~
 - ~~classes~~
