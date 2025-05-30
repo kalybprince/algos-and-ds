@@ -45,3 +45,10 @@ myPromise
   });
 
 console.log("Further operations after initiating the Promise...");
+
+/* Output:
+
+Promise created & currently pending...
+Further operations after initiating the Promise...
+Success: Data fetched successfully!
+Promise operation completed. */
