@@ -55,24 +55,29 @@ function analyzeTransactions(transactions, overdraftLimit) {
       case "deposit":
         currentBalance += eachTransaction.amount;
         break;
+
       case "withdrawal":
         currentBalance -= eachTransaction.amount;
         withdrawalCount += 1;
         break;
+
       case "fee":
         currentBalance -= eachTransaction.amount;
         if (eachTransaction.amount > 10) {
           highFeeDetected = true;
         }
         break;
+
       case "transfer":
         currentBalance -= eachTransaction.amount;
         break;
+
       default:
         console.log(
           `Unknown transaction type encountered: ${eachTransaction.type}`
         );
     }
+
     if (currentBalance < -overdraftLimit) {
       overdraftBreached = true;
       break;

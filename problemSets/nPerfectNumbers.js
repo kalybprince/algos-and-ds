@@ -56,9 +56,11 @@ function findFirstNPerfectNumbers(n) {
         sumOfProperDivisors += i;
       }
     }
+
     if (candidateNumber > 1 && sumOfProperDivisors === candidateNumber) {
       perfectNumbers.push(candidateNumber);
     }
+
     candidateNumber++;
   }
   return perfectNumbers;
