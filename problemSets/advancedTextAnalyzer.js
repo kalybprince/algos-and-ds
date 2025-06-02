@@ -27,24 +27,13 @@
           * If it's punctuation, increment `punctuation` count.
           * If it's a digit, increment `digits` count.
           * Otherwise, increment `otherCharacters` count.
-      c.  **For letters only (vowels or consonants)**: Update the `characterFrequency` object.
-          * If the character is a letter, increment its count in `characterFrequency`.
-          * Example: `characterFrequency['a'] = (characterFrequency['a'] || 0) + 1;`
 
-  4.  **After the loop**, determine the `mostFrequentLetter`:
-      * Iterate through the `characterFrequency` object (e.g., using a `for...in` loop or `Object.entries()`).
-      * Find the letter with the highest count.
-      * If no letters are found, `mostFrequentLetter` should be an empty string `""`.
-      * If there's a tie, return the first one encountered alphabetically (or just the first one you find).
-
-  5.  Return an object with all the calculated counts and the `mostFrequentLetter`.
+  4.  Return an object with all the calculated counts.
 
   This challenge focuses on:
   - `for` loops for string iteration.
   - Complex `if/else if/else` (or `switch`) for categorization.
   - String methods (`toLowerCase()`, `includes()`).
-  - Object manipulation (for `characterFrequency`).
-  - Logic for finding max value in an object.
   - Handling various character types.
 
   Example:
@@ -64,25 +53,69 @@
 
 // Write your function here!
 // Remember to define the function name and its parameter.
+function analyzeText(text) {
+  // counters
+  let vowels = 0;
+  let consonants = 0;
+  let spaces = 0;
+  let punctuation = 0;
+  let digits = 0;
+  let otherCharacters = 0;
+
+  let lowerText = text.toLowerCase();
+
+  const VOWELCHECKSTRING = "aeiou";
+  const CONSONANTCHECKSTRING = "bcdfghjklmnpqrstvwxyz";
+  const SPACECHECKSTRING = " ";
+  const PUNCTUATIONCHECKSTRING = ".,!?;:'\"";
+  const DIGITCHECKSTRING = "0123456789";
+
+  // Object to store counts for each letter
+  characterFrequency = {
+    vowels,
+    consonants,
+    spaces,
+    punctuation,
+    digits,
+    otherCharacters,
+  };
+
+  for (let eachCharacter of lowerText) {
+    if (VOWELCHECKSTRING.includes(eachCharacter)) {
+      characterFrequency.vowels += 1;
+    } else if (CONSONANTCHECKSTRING.includes(eachCharacter)) {
+      characterFrequency.consonants += 1;
+    } else if (SPACECHECKSTRING.includes(eachCharacter)) {
+      characterFrequency.spaces += 1;
+    } else if (PUNCTUATIONCHECKSTRING.includes(eachCharacter)) {
+      characterFrequency.punctuation += 1;
+    } else if (DIGITCHECKSTRING.includes(eachCharacter)) {
+      characterFrequency.digits += 1;
+    } else {
+      characterFrequency.otherCharacters += 1;
+    }
+  }
+
+  return characterFrequency;
+}
 
 // --- Test Cases (Do not modify below this line) ---
 console.log("Test Case 1: 'Hello, World! 123'");
 console.log(analyzeText("Hello, World! 123"));
-// Expected: { vowels: 3, consonants: 7, spaces: 2, punctuation: 2, digits: 3, otherCharacters: 0, mostFrequentLetter: 'l' }
+// Expected: { vowels: 3, consonants: 7, spaces: 2, punctuation: 2, digits: 3, otherCharacters: 0};
 
 console.log("\nTest Case 2: 'JavaScript is FUN.'");
 console.log(analyzeText("JavaScript is FUN."));
-// Expected: { vowels: 5, consonants: 9, spaces: 3, punctuation: 1, digits: 0, otherCharacters: 0, mostFrequentLetter: 's' } (or 'a' or 'i' depending on tie-break)
+// Expected: { vowels: 5, consonants: 9, spaces: 3, punctuation: 1, digits: 0, otherCharacters: 0 };
 
 console.log("\nTest Case 3: 'A quick brown fox jumps over the lazy dog.'");
 console.log(analyzeText("A quick brown fox jumps over the lazy dog."));
-// Expected: { vowels: 12, consonants: 23, spaces: 8, punctuation: 1, digits: 0, otherCharacters: 0, mostFrequentLetter: 'o' }
+// Expected: { vowels: 12, consonants: 23, spaces: 8, punctuation: 1, digits: 0, otherCharacters: 0};
 
 console.log("\nTest Case 4: '' (Empty string)");
 console.log(analyzeText(""));
-// Expected: { vowels: 0, consonants: 0, spaces: 0, punctuation: 0, digits: 0, otherCharacters: 0, mostFrequentLetter: '' }
+// Expected: { vowels: 0, consonants: 0, spaces: 0, punctuation: 0, digits: 0, otherCharacters: 0}
 
 console.log("\nTest Case 5: '12345!@#$%'");
 console.log(analyzeText("12345!@#$%"));
-// Expected: { vowels: 0, consonants: 0, spaces: 0, punctuation: 1, digits: 5, otherCharacters: 4, mostFrequentLetter: '' } (punctuation: !,@,#,$,%)
-// Note: Punctuation definition is flexible. For this challenge, stick to the provided list.
+// Expected: { vowels: 0, consonants: 0, spaces: 0, punctuation: 1, digits: 5, otherCharacters: 4};
