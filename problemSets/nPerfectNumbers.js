@@ -41,6 +41,29 @@
 // Write your function here!
 // Remember to define the function name and its parameters.
 
+function findFirstNPerfectNumbers(n) {
+  let perfectNumbers = [];
+  let candidateNumber = 1;
+
+  if (n === 0) {
+    return [];
+  }
+
+  while (perfectNumbers.length < n) {
+    let sumOfProperDivisors = 0;
+    for (let i = 0; i <= candidateNumber / 2; i++) {
+      if (candidateNumber % i === 0) {
+        sumOfProperDivisors += i;
+      }
+    }
+    if (candidateNumber > 1 && sumOfProperDivisors === candidateNumber) {
+      perfectNumbers.push(candidateNumber);
+    }
+    candidateNumber++;
+  }
+  return perfectNumbers;
+}
+
 // --- Test Cases (Do not modify below this line) ---
 console.log("Test Case 1 (n=0):", findFirstNPerfectNumbers(0)); // Expected: []
 console.log("Test Case 2 (n=1):", findFirstNPerfectNumbers(1)); // Expected: [6]
