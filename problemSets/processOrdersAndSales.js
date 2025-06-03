@@ -77,9 +77,55 @@ function processOrders(orders) {
   let cancelledOrdersRevenueLoss = 0;
   let processedOrdersDetails = [];
 
-  for (eachOrder of orders) {
-    console.log(eachOrder.items.unitPrice);
+  // Outer loop: Iterate through each order in the "orders" array
+  for (const eachOrder of orders) {
+    let orderSubtotal = 0;
+
+    // Inner loop: Calculate the subtotal for the current order
+    for (const eachItem of eachOrder.items) {
+      orderSubtotal += eachItem.quantity * eachItem.unitPrice;
+    }
+
+    // Conditional processing based on order status
+    if (eachOrder.status === "completed") {
+      let finalAmount = orderSubtotal;
+      let discountApplied = false;
+
+      // Apply discount if customerType is "premium"
+      if (eachOrder.customerType === "premium") {
+        const discountPercentage = 0.1; // 10% discount
+        finalAmount = orderSubtotal - orderSubtotal * discountPercentage;
+        discountApplied = true;
+      }
+
+      totalRevenue += finalAmount; // Add final amount to total revenue
+
+      processedOrdersDetails.push({
+        orderId: eachOrder.orderId,
+        finalAmount,
+        discountApplied,
+      });
+    } else if (eachOrder.status === "pending") {
+      pendingOrdersCount += 1; // Incremement pending orders count
+    } else if (eachOrder.status === "cancelled") {
+      cancelledOrdersRevenueLoss += orderSubtotal; // Add subtotal to revenue loss
+    } else {
+      // Log a warning for unknown statuses
+      console.warn(
+        "Unknown order status encountered for orderID:",
+        eachOrder.orderId,
+        eachOrder.status
+      );
+    }
   }
+
+  // Return the final summary object
+  return {
+    totalRevenue,
+    pendingOrdersCount,
+    cancelledOrdersRevenueLoss,
+    processedOrdersDetails,
+  };
 }
 
 // --- Test Cases (Do not modify below this line) ---
