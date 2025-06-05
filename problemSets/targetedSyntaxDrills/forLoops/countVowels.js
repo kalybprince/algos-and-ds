@@ -14,9 +14,11 @@ Function: countVowels(text)
 function countVowels(text) {
   let vowelCount = 0;
   const vowels = "aeiou";
+
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
     const lowerChar = char.toLowerCase();
+
     if (vowels.includes(lowerChar)) {
       vowelCount++;
     }
